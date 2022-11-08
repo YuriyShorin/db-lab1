@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab1gui.MainPageController">
+   <children>
+      <TextField fx:id="createDatabase" layoutX="143.0" layoutY="62.0" promptText="name" />
+      <Button fx:id="createButton" layoutX="762.0" layoutY="62.0" mnemonicParsing="false" onAction="#databaseCreateButton" text="create" />
+      <TextField fx:id="nameOfFile" layoutX="303.0" layoutY="62.0" prefHeight="25.0" prefWidth="322.0" promptText="path to file with names of Students" />
+      <TextField fx:id="variants" layoutX="627.0" layoutY="63.0" prefHeight="25.0" prefWidth="123.0" promptText="number of variants" />
+      <Button layoutX="115.0" layoutY="27.0" mnemonicParsing="false" onAction="#saveButton" text="save" />
+      <Label layoutX="33.0" layoutY="66.0" text="Create database" />
+      <TableView fx:id="table" layoutX="20.0" layoutY="255.0" prefHeight="642.0" prefWidth="609.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="68.0" resizable="false" text="Id" />
+          <TableColumn fx:id="studentsNamesColumn" prefWidth="368.0" resizable="false" text="Students" />
+            <TableColumn fx:id="variantsColumn" prefWidth="172.0" resizable="false" text="Variants" />
+        </columns>
+      </TableView>
+      <TextField fx:id="deleteDatabase" layoutX="455.0" layoutY="100.0" prefHeight="25.0" prefWidth="162.0" promptText="name" />
+      <Button layoutX="627.0" layoutY="100.0" mnemonicParsing="false" onAction="#databaseDeleteButton" text="delete" />
+      <Label layoutX="360.0" layoutY="104.0" text="Delete database" />
+      <Label layoutX="29.0" layoutY="104.0" text="Open database" />
+      <TextField fx:id="openDatabase" layoutX="124.0" layoutY="100.0" prefHeight="25.0" prefWidth="162.0" promptText="name" />
+      <Button layoutX="302.0" layoutY="100.0" mnemonicParsing="false" onAction="#databaseOpenButton" text="open" />
+      <Button layoutX="33.0" layoutY="27.0" mnemonicParsing="false" onAction="#backupButton" text="backup" />
+      <Label layoutX="24.0" layoutY="139.0" text="Add student" />
+      <TextField fx:id="addStudentName" layoutX="110.0" layoutY="135.0" prefHeight="25.0" prefWidth="233.0" promptText="name" />
+      <TextField fx:id="addStudentVariant" layoutX="360.0" layoutY="135.0" prefHeight="25.0" prefWidth="57.0" promptText="variant" />
+      <Button layoutX="428.0" layoutY="135.0" mnemonicParsing="false" onAction="#addStudentsButton" text="add" />
+      <Button layoutX="479.0" layoutY="135.0" mnemonicParsing="false" onAction="#automateVariantButton" text="automate variant" />
+      <Label layoutX="30.0" layoutY="172.0" text="Edit " />
+      <TextField fx:id="editId" layoutX="68.0" layoutY="168.0" prefHeight="25.0" prefWidth="44.0" promptText="id" />
+      <TextField fx:id="editName" layoutX="124.0" layoutY="168.0" prefHeight="25.0" prefWidth="206.0" promptText="name" />
+      <TextField fx:id="editVariant" layoutX="343.0" layoutY="168.0" prefHeight="25.0" prefWidth="55.0" promptText="variant" />
+      <Button layoutX="417.0" layoutY="168.0" mnemonicParsing="false" onAction="#editButton" text="edit" />
+      <Label layoutX="18.0" layoutY="206.0" text="Delete student" />
+      <TextField fx:id="deleteId" layoutX="121.0" layoutY="202.0" prefHeight="25.0" prefWidth="44.0" promptText="id" />
+      <TextField fx:id="deleteName" layoutX="211.0" layoutY="202.0" prefHeight="25.0" prefWidth="206.0" promptText="name" />
+      <Label layoutX="183.0" layoutY="206.0" text="or" />
+      <Button layoutX="439.0" layoutY="202.0" mnemonicParsing="false" onAction="#deleteStudentButton" text="delete" />
+      <Label fx:id="errorLabel" layoutX="890.0" layoutY="255.0" prefHeight="71.0" prefWidth="277.0" />
+      <Button layoutX="818.0" layoutY="62.0" mnemonicParsing="false" onAction="#databaseCreateMoreButton" text="create more" />
+   </children>
+</AnchorPane>
